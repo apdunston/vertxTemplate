@@ -7,7 +7,7 @@ public class MainVerticle extends AbstractVerticle {
     public void start(Future<Void> fut) {
         Router router = Router.router(vertx);
 
-        router.mountSubRouter("/", new MainController().router());
+        router.mountSubRouter("/", new MainController(vertx).router());
 
 
 
